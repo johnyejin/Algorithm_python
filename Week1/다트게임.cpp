@@ -18,9 +18,7 @@ int solution(string dartResult) {
                 continue;
             }
             temp[cnt] = dartResult[i] - '0';
-            i++;
             cnt++;
-            continue;
         } 
         else if (dartResult[i] == 'S') {
             temp[cnt-1] = pow(temp[cnt-1], 1);
@@ -32,13 +30,9 @@ int solution(string dartResult) {
         else if (dartResult[i] == '*') {
             temp[cnt-1] *= 2;
             temp[cnt-2] *= 2;
-            i++;
-            continue;
         } 
         else if (dartResult[i] == '#') {
             temp[cnt-1] = temp[cnt-1] * (-1);
-            i++;
-            continue;
         }
         i++;
     }
