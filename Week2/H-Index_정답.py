@@ -11,6 +11,9 @@ def solution(citations):
             if i > mid:
                 cnt += 1
 
+        if left > right:
+            return cnt
+
         if cnt == len(citations):
             return cnt
 
