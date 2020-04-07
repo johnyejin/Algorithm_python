@@ -2,7 +2,7 @@ def solution(progresses, speeds):
     answer = []
     finish = [0] * len(progresses)
 
-    while min(progresses) != 100:
+    while max(finish) != -1:
 
         for i in range(len(speeds)):
             progresses[i] += speeds[i]
