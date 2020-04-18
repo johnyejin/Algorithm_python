@@ -18,7 +18,7 @@ def solution(skill, skill_trees):
                 check.append(dic[skill_trees[i][j]])
 
         if flag: answer += 1
-        print(check)
+        # print(check)
 
     return answer
 
