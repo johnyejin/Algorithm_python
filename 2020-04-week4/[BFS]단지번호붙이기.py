@@ -2,8 +2,9 @@ def bfs(house, start_node):
     global visit
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
-    cnt = 0
+    cnt = 1
     queue = [start_node]
+    visit[start_node[0]][start_node[1]] = 1
 
     while queue:
         node = queue.pop(0)
@@ -16,8 +17,7 @@ def bfs(house, start_node):
                 queue.append([nx, ny])
                 cnt += 1
                 visit[nx][ny] = 1
-        # print(queue, cnt)
-    print("bfs visit", visit)
+            print(start_node, queue, cnt)
     return cnt
 
 
@@ -32,7 +32,6 @@ def solution():
         for j in range(n):
             if visit[i][j] == 0 and house[i][j] == 1:
                 answer.append(bfs(house, [i, j]))
-                print("main", visit)
 
     print(len(answer))
     answer.sort()
